@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var i = 1;
-  $("#add_row").click(function() {
+  $("#add_row_income, #add_row_expense").click(function() {
     $('#addr' + i).html("<td>" + (i + 1) + "</td><td><input name='name" +
     i + "' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='Amount" +
     i + "' type='text' placeholder='Amount in $$'  class='form-control input-md'></td><td><input  name='total" +
