@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     }
   });
-  $("#delete_row").click(function() {
+  $("#delete_row_income, #delete_row_expense").click(function() {
     if (i > 1) {
       $("#addr" + (i - 1)).html('');
       i--;
