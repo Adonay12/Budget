@@ -3,7 +3,7 @@ $(document).ready(function() {
   $("#add_row_income").click(function() {
     $('#addr' + i).html("<td>" + (i + 1) + "</td><td><input name='name" +
     i + "' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='Amount" +
-    i + "' type='text' placeholder='Amount in $$'  class='form-control input-md'></td><td><input  name='total" +
+    i + "' type='text' placeholder='Amount in $$'  class='amount form-control input-md'></td><td><input  name='total" +
     i + "' type='text' placeholder='Total' id='totals' class='form-control input-md'></td>");
 
     $('#tab_logicc').append('<tr id="addr' + (i + 1) + '"></tr>');
@@ -24,8 +24,9 @@ $(document).ready(function() {
   });
 
 });
-$(document).ready(function() {
   var j = 1;
+
+$(document).ready(function() {
   $("#add_row_expense").click(function() {
     $('#addrr' + j).html("<td>" + (j + 1) + "</td><td><input name='name" +
     j + "' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='Amount" +
@@ -50,6 +51,22 @@ $(document).ready(function() {
       j--;
     }
   });
+  var total = 0;
+  $('.income').on('change', 'input.amount', function (event) {
+    var amounts = $('.income input.amount')
+    var total = 0;
+    for (var i = 0; i < amounts.length; i++) {
+      total += Number(amounts[i].value)
+
+    }
+    // $("#totals").innerHTML = total;
+    $('#totals').val(total)
+    console.log(total)
+  })
 
 });
+
+
+
+
 
