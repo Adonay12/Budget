@@ -22,6 +22,18 @@ $(document).ready(function() {
       i--;
     }
   });
+  var total = 0;
+  $('.income').on('change', 'input.amount', function (event) {
+    var amounts = $('.income input.amount')
+    var total = 0;
+    for (var i = 0; i < amounts.length; i++) {
+      total += Number(amounts[i].value)
+
+    }
+    // $("#totals").innerHTML = total;
+    $('#totals').val(total)
+    console.log(total)
+  })
 
 });
   var j = 1;
@@ -30,7 +42,7 @@ $(document).ready(function() {
   $("#add_row_expense").click(function() {
     $('#addrr' + j).html("<td>" + (j + 1) + "</td><td><input name='name" +
     j + "' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='Amount" +
-    j + "' type='text' id='money' placeholder='Amount in $$' value=''  class='form-control input-md money'></td><td><input  name='total" +
+    j + "' type='text' id='money' placeholder='Amount in $$' value=''  class='restAmount form-control input-md money'></td><td><input  name='total" +
     j + "' type='text' placeholder='Total' id='totalss' class='form-control input-md'></td>");
 
     $('#tab_logic').append('<tr id="addrr' + (j + 1) + '"></tr>');
@@ -45,24 +57,25 @@ $(document).ready(function() {
     }
   });
   $("#delete_row_expense").click(function() {
+    console.log("hello1");
     if (j > 1) {
 
       $("#addrr" + (j - 1)).html('');
       j--;
     }
   });
-  var total = 0;
-  $('.income').on('change', 'input.amount', function (event) {
-    var amounts = $('.income input.amount')
-    var total = 0;
+    var remaining = 0;
+  $('.expense').on('change', '.restAmount', function (event) {
+    var amounts = $('.expense .restAmount')
+    var remaining = 0;
     for (var i = 0; i < amounts.length; i++) {
-      total += Number(amounts[i].value)
+      remaining += Number(amounts[i].value)
 
     }
-    // $("#totals").innerHTML = total;
-    $('#totals').val(total)
-    console.log(total)
+    $('#totalss').val(remaining - $('#totals').val());
+    console.log(remaining)
   })
+
 
 });
 
