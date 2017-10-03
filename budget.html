@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>yooBudget</title>
+<title>yourBudget</title>
 
 <head>
   <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <a class="navbar-brand" href="#">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-    
+
   </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,7 +44,7 @@
   <div class="container toHalf">
     <div class="row clearfix">
       <div class="col-md-12 column">
-        <table class="table table-bordered table-hover" id="tab_logicc">
+        <table class="income table table-bordered table-hover" id="tab_logicc">
           <thead>
             <tr>
               <th class="text-center">
@@ -67,7 +67,7 @@
                 <input type="text" name='name0' placeholder='Name' class="form-control" />
               </td>
               <td>
-                <input type="text" name='mail0' placeholder='Amount in $$' class="form-control" />
+                <input type="text" name='mail0' placeholder='Amount in $$' class="amount form-control" />
               </td>
             </tr>
             <tr id='addr1'></tr>
@@ -80,7 +80,7 @@
                 List
               </th>
               <th class="text-center">
-                Sources of Income
+                Sources of Expenses
               </th>
               <th class="text-center">
                 Amount
@@ -101,14 +101,14 @@
             </tr>
             <tr id='addrr1'></tr>
           </tbody>
-        </table>      
+        </table>
       </div>
     </div>
     <a id="add_row_income" class="btn btn-default pull-left">Add Row</a><a
       id='delete_row_income' class="pull-right btn btn-default">Delete Row</a>
     <a id="add_row_expense" class="btn btn-default pull-left">Add Row</a><a
       id='delete_row_expense' class="pull-right btn btn-default">Delete Row</a>
- 
+
   </div>
   <script src="./budget.js"></script>
 </body>
