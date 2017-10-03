@@ -29,7 +29,7 @@ $(document).ready(function() {
   $("#add_row_expense").click(function() {
     $('#addrr' + j).html("<td>" + (j + 1) + "</td><td><input name='name" +
     j + "' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='Amount" +
-    j + "' type='text' placeholder='Amount in $$'  class='form-control input-md'></td><td><input  name='total" +
+    j + "' type='text' id='money' placeholder='Amount in $$' value=''  class='form-control input-md money'></td><td><input  name='total" +
     j + "' type='text' placeholder='Total' id='totalss' class='form-control input-md'></td>");
 
     $('#tab_logic').append('<tr id="addrr' + (j + 1) + '"></tr>');
@@ -37,8 +37,9 @@ $(document).ready(function() {
     if(j>2){
       console.log('getting into the loop for expenses');
       console.log(j);
-     // console.log(document.getElementById('totals'))
-      document.getElementById('totalss').remove();
+        document.getElementById('totalss').remove();
+        console.log(document.getElementById('totals'))
+
 
     }
   });
@@ -51,3 +52,4 @@ $(document).ready(function() {
   });
 
 });
+
