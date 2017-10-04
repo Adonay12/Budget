@@ -32,6 +32,7 @@ $(document).ready(function() {
     }
     // $("#totals").innerHTML = total;
     $('#totals').val(total)
+		graph();	
     console.log(total)
   })
 
@@ -70,12 +71,31 @@ $(document).ready(function() {
     var remaining = 0;
     for (var i = 0; i < amounts.length; i++) {
       remaining += Number(amounts[i].value)
-
+						
     }
-    $('#totalss').val(remaining - $('#totals').val());
+    $('#totalss').val($('#totals').val() - remaining );
+		graph();
     console.log(remaining)
   })
 
 
 });
-
+function graph(){
+new Chart(document.getElementById("pie-chart"), {
+    type: 'pie',
+    data: {
+      labels: ["Income", "Expense"],
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#3e95cd", "#8e5ea2"],
+        data: [$('#totals').val(),$('#totalss').val()]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+}
