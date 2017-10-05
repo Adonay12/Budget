@@ -32,7 +32,7 @@ $(document).ready(function() {
     }
     // $("#totals").innerHTML = total;
     $('#totals').val(total)
-		graph();	
+		graph();
     console.log(total)
   })
 
@@ -71,7 +71,7 @@ $(document).ready(function() {
     var remaining = 0;
     for (var i = 0; i < amounts.length; i++) {
       remaining += Number(amounts[i].value)
-						
+
     }
     $('#totalss').val($('#totals').val() - remaining );
 		graph();
@@ -81,7 +81,12 @@ $(document).ready(function() {
 
 });
 function graph(){
-new Chart(document.getElementById("pie-chart"), {
+  var placeholder = document.querySelector('#placeholder')
+  if (placeholder) placeholder.remove()
+  var wrapper = document.getElementById("pie-chart")
+  wrapper.innerHTML = `<canvas id="chart" width="200" height="200"></canvas>`
+  var chart = document.querySelector('#chart')
+  new Chart(chart, {
     type: 'pie',
     data: {
       labels: ["Income", "Expense"],
@@ -92,6 +97,7 @@ new Chart(document.getElementById("pie-chart"), {
       }]
     },
     options: {
+      responsive: true,
       title: {
         display: true,
         text: 'Predicted world population (millions) in 2050'

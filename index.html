@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<title>yourBudget</title>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+        shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="budget.css">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Budget<span class="sr-only">Budget</span></a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        SignUp | LogIn
+      </div>
+    </div>
+  </nav>
+</head>
+
+<body>
+  <div class="container piggyBank full-height">
+    <div class="row">
+      <div class="col">
+        <div id="alignMiddle">
+          <a href="#page2">Start Budgeting</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page2" class="container-fluid transactions full-height">
+    <div class="row">
+      <div class="col">
+        <table class="income table table-bordered table-hover" id="tab_logicc">
+          <thead>
+            <tr>
+              <th class="text-center">
+                List
+              </th>
+              <th class="text-center">
+                Sources of Income
+              </th>
+              <th class="text-center">
+                Amount
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id='addr0'>
+              <td>
+                1
+              </td>
+              <td>
+                <input type="text" name='name0' placeholder='Name' class="form-control" />
+              </td>
+              <td>
+                <input type="text" name='mail0' placeholder='Amount in $$' class="amount form-control" />
+              </td>
+            </tr>
+            <tr id='addr1'></tr>
+          </tbody>
+        </table>
+        <button id="add_row_income" class="d-inline-block btn btn-primary float-left">Add Row</button><button id='delete_row_income' class="d-inline-block float-right btn btn-danger">Delete Row</button>
+      </div>
+      <div class="col">
+        <table class="expense table table-bordered table-hover" id="tab_logic">
+          <thead>
+            <tr>
+              <th class="text-center">
+                List
+              </th>
+              <th class="text-center">
+                Sources of Expenses
+              </th>
+              <th class="text-center">
+                Amount
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id='addrr0'>
+              <td>
+                1
+              </td>
+              <td>
+                <input type="text" name='name0' placeholder='Name' class="form-control" />
+              </td>
+              <td>
+                <input type="text" name='mail0' placeholder='Amount in $$' class="restAmount form-control" />
+              </td>
+            </tr>
+            <tr id='addrr1'></tr>
+          </tbody>
+        </table>
+        <button id="add_row_expense" class="d-inline-block btn btn-primary float-left">Add Row</button><button id='delete_row_expense' class="d-inline-block float-right btn btn-danger">Delete Row</button>
+      </div>
+      <div class="col">
+        <div id="placeholder">
+          <h2 class="text-center">Enter in Transactions to See Graph!</h2>
+        </div>
+        <div id="pie-chart"></div>
+      </div>
+    </div>
+    <script src="./budget.js"></script>
+</body>
+
+</html>
