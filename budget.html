@@ -26,94 +26,94 @@
         </li>
               </ul>
       <div class="form-inline my-2 my-lg-0">
-        stuff
+        SignUp | LogIn 
       </div>
     </div>
   </nav>
 </head>
 
 <body>
+      <div class="piggyBank" id="alignMiddle">
+        <a href="#page2" >Start Budgeting</a>
+      </div>
   <div class="container">
     <div class="row">
-      <div class="col piggyBank" id="alignMiddle">Start Budgeting
+      <div class="col-md-6">
+        <div class="container toHalf" id="page2">
+          <div class="row clearfix">
+            <div class="col-md-12 column">
+              <table class="income table table-bordered table-hover" id="tab_logicc">
+                <thead>
+                  <tr>
+                    <th class="text-center">
+                      List
+                    </th>
+                    <th class="text-center">
+                      Sources of Income
+                    </th>
+                    <th class="text-center">
+                      Amount
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id='addr0'>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      <input type="text" name='name0' placeholder='Name' class="form-control" />
+                    </td>
+                    <td>
+                      <input type="text" name='mail0' placeholder='Amount in $$' class="amount form-control" />
+                    </td>
+                  </tr>
+                  <tr id='addr1'></tr>
+                </tbody>
+              </table>
+               <table class="expense table table-bordered table-hover" id="tab_logic">
+                <thead>
+                  <tr>
+                    <th class="text-center">
+                      List
+                    </th>
+                    <th class="text-center">
+                      Sources of Expenses
+                    </th>
+                    <th class="text-center">
+                      Amount
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id='addrr0'>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      <input type="text" name='name0' placeholder='Name' class="form-control" />
+                    </td>
+                    <td>
+                      <input type="text" name='mail0' placeholder='Amount in $$'
+                      class="restAmount form-control" />
+                    </td>
+                  </tr>
+                  <tr id='addrr1'></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <a id="add_row_income" class="btn btn-default pull-left">Add Row</a><a
+          id='delete_row_income' class="pull-right btn btn-default">Delete Row</a>
+        <a id="add_row_expense" class="btn btn-default pull-left">Add Row</a><a
+          id='delete_row_expense' class="pull-right btn btn-default">Delete Row</a>
 
+       </div>
       </div>
-      <div class="w-100"></div>
-    </div>
-  </div>
-  <div class="container toHalf">
-    <div class="row clearfix">
-      <div class="col-md-12 column">
-        <table class="income table table-bordered table-hover" id="tab_logicc">
-          <thead>
-            <tr>
-              <th class="text-center">
-                List
-              </th>
-              <th class="text-center">
-                Sources of Income
-              </th>
-              <th class="text-center">
-                Amount
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr id='addr0'>
-              <td>
-                1
-              </td>
-              <td>
-                <input type="text" name='name0' placeholder='Name' class="form-control" />
-              </td>
-              <td>
-                <input type="text" name='mail0' placeholder='Amount in $$' class="amount form-control" />
-              </td>
-            </tr>
-            <tr id='addr1'></tr>
-          </tbody>
-        </table>
-         <table class="expense table table-bordered table-hover" id="tab_logic">
-          <thead>
-            <tr>
-              <th class="text-center">
-                List
-              </th>
-              <th class="text-center">
-                Sources of Expenses
-              </th>
-              <th class="text-center">
-                Amount
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr id='addrr0'>
-              <td>
-                1
-              </td>
-              <td>
-                <input type="text" name='name0' placeholder='Name' class="form-control" />
-              </td>
-              <td>
-                <input type="text" name='mail0' placeholder='Amount in $$'
-                class="restAmount form-control" />
-              </td>
-            </tr>
-            <tr id='addrr1'></tr>
-          </tbody>
-        </table>
+      <div class="col-md-6">
+        <canvas id="pie-chart" width="800" height="450"></canvas>
       </div>
     </div>
-    <a id="add_row_income" class="btn btn-default pull-left">Add Row</a><a
-      id='delete_row_income' class="pull-right btn btn-default">Delete Row</a>
-    <a id="add_row_expense" class="btn btn-default pull-left">Add Row</a><a
-      id='delete_row_expense' class="pull-right btn btn-default">Delete Row</a>
-
-  </div>
-  <canvas id="pie-chart" width="800" height="450"></canvas>
-  <script src="./budget.js"></script>
-</body>
-
-
+    <script src="./budget.js"></script>
+  </body>
 </html>

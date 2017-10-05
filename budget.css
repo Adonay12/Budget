@@ -16,10 +16,9 @@
   justify-content: center;
   font-size: 160%;
   color: blue;
+  height: 100vh;
 }
 .table {
   width: 50%;
   float:left;
 }
-
-
